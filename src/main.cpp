@@ -10,22 +10,20 @@
 #include <string>
 #include "List.h"
 
-void filllist(std::string s, List<char> *l){
+void fillList(std::string s, List<char> *l){
     for(char i: s)
     {
         l->insertAtBack(i);
     }
-
 }
 
 
 int main() {
-    
     List<char> list_1;
     List<char> list_2;
 
-    filllist("singlylinkedlist", &list_1);
-    filllist("abcdefg", &list_2);
+    fillList("singlylinkedlist", &list_1);
+    fillList("abcdefg", &list_2);
 
     list_1.print();
     list_2.print();
