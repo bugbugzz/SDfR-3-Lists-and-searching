@@ -11,14 +11,16 @@
 #include "List.h"
 
 // Function to fill list with string
-void filllist(std::string s, List<char>& l){
+void fillList(std::string s, List<char>& l){
     for(char i: s) {
         l.insertAtBack(i);
     }
 }
 
-// ================= 3 TEST CASES =================
-
+// 3 Test cases
+// 1. Test insertion and removal of nodes
+// 2. Test concatenation of two non-empty lists (normal case)
+// 3. Test concatenation of a non-empty list to an empty list
 void testInsertionAndRemoval() {
     List<char> list;
     list.insertAtBack('a');
@@ -36,8 +38,8 @@ void testInsertionAndRemoval() {
 
 void testConcatenateNormal() {
     List<char> l1, l2;
-    filllist("ab", l1);
-    filllist("cd", l2);
+    fillList("ab", l1);
+    fillList("cd", l2);
 
     l1.concatenate(l2);
 
@@ -54,7 +56,7 @@ void testConcatenateNormal() {
 
 void testConcatenateToEmpty() {
     List<char> emptyList, l2;
-    filllist("xyz", l2);
+    fillList("xyz", l2);
 
     // Concatenate a full list to an EMPTY list
     emptyList.concatenate(l2);
@@ -70,14 +72,14 @@ void testConcatenateToEmpty() {
 }
 
 void runTests() {
-    std::cout << "--- Running 3 Tests ---\n";
+    std::cout << "Running 3 Tests\n";
     testInsertionAndRemoval();
     testConcatenateNormal();
     testConcatenateToEmpty();
-    std::cout << "--- All tests passed successfully! ---\n\n";
+    std::cout << "All tests passed successfully!\n\n";
 }
 
-// ================= MAIN FUNCTION =================
+// main function
 
 int main() {
     // 1. Run the tests
@@ -86,14 +88,14 @@ int main() {
     // 2. Your original assignment logic
     List<char> list_1, list_2, list_3, list_4;
 
-    filllist("singlylinkedlist", list_1);
-    filllist("abcdefg", list_2);
+    fillList("singlylinkedlist", list_1);
+    fillList("abcdefg", list_2);
     
     list_1.print();
     list_2.print();
 
-    filllist("hijklmnop", list_3);
-    filllist("qrstuvw", list_4);
+    fillList("hijklmnop", list_3);
+    fillList("qrstuvw", list_4);
 
     list_2.concatenate(list_3);
     list_2.concatenate(list_4);
