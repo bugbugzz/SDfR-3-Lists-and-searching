@@ -60,26 +60,23 @@ public:
    } 
 
     //concatenate lists
-   void concatenate(List<NODETYPE>& list) {
+   void concatenate(List<NODETYPE>& otherList) {
+      //Check if the list we are trying to add is empty. If it is, we can just return since there is nothing to add.
+      if (otherList.isEmpty()) return; 
 
-      ListNode<NODETYPE>* tempPtr{nullptr}; // temporary node
+      //Check if the current list (the one calling this method) is empty.
+      if (this->isEmpty()) {
+         this->firstPtr = otherList.firstPtr;
+         this->lastPtr = otherList.lastPtr;
+      // Normal case: Both lists contain nodes.
+      } else {
+         this->lastPtr->nextPtr = otherList.firstPtr; //Link the very last node of the current list to the first node of the other list.
+         this->lastPtr = otherList.lastPtr; // Update the current list's 'lastPtr' to point to the end of the newly attached list.
+      }
 
-      //Iterate over the whole list
-      while (list.firstPtr != nullptr) { 
-            //insert nodes at the back of current list
-            tempPtr = list.firstPtr;
-            lastPtr->nextPtr = tempPtr; //update previous last node
-            lastPtr = tempPtr; //new last node
-
-            //empty argument list
-            if (firstPtr == lastPtr) {
-            list.firstPtr = list.lastPtr = nullptr; //no nodes remain after removal
-            } 
-            else {
-            list.firstPtr = list.firstPtr->nextPtr; //points to previous 2nd node
-            } 
-         } 
-
+      //Empty the argument list.
+      otherList.firstPtr = nullptr;
+      otherList.lastPtr = nullptr;
    }
 
    // delete node from front of list
