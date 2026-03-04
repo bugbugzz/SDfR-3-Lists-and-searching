@@ -1,3 +1,11 @@
+//=====================...........................=================================
+// Authors : Milou de Zwaan (2629070), Shatrunjay Palkar (3669734)
+// Group : 14
+// License : LGPL open source license
+//
+// Brief : This file contains the definition of the List class template, which implements a singly linked list data structure. 
+//The List class provides methods for inserting and removing nodes, concatenating lists, checking if the list is empty, and printing the contents of the list.
+//=====================...........................=================================
 // Fig. 19.5: List.h
 // List class-template definition.
 #ifndef LIST_H

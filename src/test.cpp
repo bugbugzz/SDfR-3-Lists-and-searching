@@ -2,6 +2,7 @@
 // Authors : Milou de Zwaan(2629070), Shatrunjay Palkar(3669734)
 // Group : SDfR-PPD 14
 // License : LGPL open source license
+// Brief : This file contains test cases for the List class, including insertion, removal, and concatenation.
 //==================================================================================================
 
 #include <iostream>

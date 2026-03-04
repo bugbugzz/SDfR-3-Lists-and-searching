@@ -3,7 +3,7 @@
 // Group : SDfR-PPD 14
 // License : LGPL open source license
 //
-// Brief : 
+// Brief : main to demonstrate the functionality of the List class, including insertion, concatenation, and printing of lists.
 //==================================================================================================
 
 #include <iostream>
