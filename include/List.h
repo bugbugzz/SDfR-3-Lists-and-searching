@@ -59,6 +59,29 @@ public:
       } 
    } 
 
+    //concatenate lists
+   void concatenate(List<NODETYPE>& list) {
+
+      ListNode<NODETYPE>* tempPtr{nullptr}; // temporary node
+
+      //Iterate over the whole list
+      while (list.firstPtr != nullptr) { 
+            //insert nodes at the back of current list
+            tempPtr = list.firstPtr;
+            lastPtr->nextPtr = tempPtr; //update previous last node
+            lastPtr = tempPtr; //new last node
+
+            //empty argument list
+            if (firstPtr == lastPtr) {
+            list.firstPtr = list.lastPtr = nullptr; //no nodes remain after removal
+            } 
+            else {
+            list.firstPtr = list.firstPtr->nextPtr; //points to previous 2nd node
+            } 
+         } 
+
+   }
+
    // delete node from front of list
    bool removeFromFront(NODETYPE& value) {
       if (isEmpty()) { // List is empty
