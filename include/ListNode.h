@@ -1,3 +1,10 @@
+//=====================...........................=================================
+// Authors : Milou de Zwaan (2629070), Shatrunjay Palkar (3669734)
+// Group : 14
+// License : LGPL open source license
+// Brief : this file contains the definition of the List class template, which implements a singly linked list data structure.
+//=====================...........................=================================
+
 // Fig. 19.4: ListNode.h
 // ListNode class-template definition.
 #ifndef LISTNODE_H

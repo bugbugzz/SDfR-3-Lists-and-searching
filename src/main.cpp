@@ -3,7 +3,7 @@
 // Group : SDfR-PPD 14
 // License : LGPL open source license
 //
-// Brief : 
+// Brief : main to demonstrate the functionality of the List class, including insertion, concatenation, and printing of lists.
 //==================================================================================================
 
 #include <iostream>
@@ -11,7 +11,7 @@
 #include "List.h"
 
 //Function to fill list with string
-void filllist(std::string s, List<char>& l){
+void fillList(std::string s, List<char>& l){
 
     //Iterate over each element of the string
     for(char i: s)
@@ -27,8 +27,8 @@ int main() {
     List<char> list_2; //Creating empty list of type char
 
     //Fill lists 1 and 2 with strings
-    filllist("singlylinkedlist", list_1);
-    filllist("abcdefg", list_2);
+    fillList("singlylinkedlist", list_1);
+    fillList("abcdefg", list_2);
 
     //Display list_1 and list_2
     list_1.print();
@@ -38,8 +38,8 @@ int main() {
     List<char> list_4; //Creating empty list of type char
 
     //Fill lists 3 and 4 with strings
-    filllist("hijklmnop", list_3);
-    filllist("qrstuvw", list_4);
+    fillList("hijklmnop", list_3);
+    fillList("qrstuvw", list_4);
 
     //Concatenate list_3 to list_2 and empty list_3
     list_2.concatenate(list_3);
